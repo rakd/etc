@@ -1,0 +1,8 @@
+#!/bin/sh
+
+
+exec 2>&1
+exec setuidgid www /opt/local/bin/spawn-fcgi -C 30 -n -a 127.0.0.1 -p 9000 -f /opt/local/bin/php-cgi55
+#exec setuidgid www /usr/sbin/php-fpm -C 30 -n -a 127.0.0.1 -p 9000 -f /opt/local/bin/php-cgi53 
+#exec /usr/sbin/php-fpm -C 30 -n -a 127.0.0.1 -p 9000 -f /opt/local/bin/php-cgi53 
+
