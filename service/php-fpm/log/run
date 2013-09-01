@@ -1,0 +1,8 @@
+#!/bin/sh
+# s = Logfile Size, n = LogLotateNumber
+# Logfile Size = 5MB
+PATH=/usr/local/bin:/usr/bin:/bin
+export PATH
+#exec setuidgid log multilog t s5242880 n10 ./main
+exec multilog t s5242880 n10 ./main
+
