@@ -87,7 +87,7 @@ alias ...='cd ../../../'
 alias ....='cd ../../../../'
  
 # SSH aliases - short cuts to ssh to a host
-k
+#k
 
 alias sweb1='screen -t HOST web1'
 
