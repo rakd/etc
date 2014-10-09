@@ -1,6 +1,0 @@
-#!/bin/sh
-exec 2>&1
-#exec /usr/local/sbin/nginx -c /usr/local/etc/nginx/nginx.conf -g 'daemon off;'
-exec /usr/local/bin/nginx -c /usr/local/etc/nginx/nginx.conf -g 'daemon off;'
-
-

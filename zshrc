@@ -91,3 +91,8 @@ alias ....='cd ../../../../'
 
 alias sweb1='screen -t HOST web1'
 
+
+# anyenv
+export PATH="$HOME/.anyenv/bin:$PATH"
+eval "$(anyenv init -)"
+
