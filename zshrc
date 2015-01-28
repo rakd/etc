@@ -60,7 +60,7 @@ at_strikeoff=%{$'\e[29m'%}
 
 #Set the auto completion on
 autoload -U compinit
-#compinit
+compinit
  
 #Lets set some options
 #setopt correctall
