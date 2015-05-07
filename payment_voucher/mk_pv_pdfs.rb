@@ -24,7 +24,11 @@ CSV.foreach(TSV_FILE_NAME, :col_sep => "\t") do |row|
     desc = row[6]
     i_number = row[10]
     if i_number.to_s.strip=='' and e_number.to_s.strip!='Bank'
-      if payee.to_s.strip!='' and desc.to_s.strip!=''
+      if payee.to_s.strip!='' and desc.to_s.strip!='' and ammount.to_s.strip!='' and date.to_s.strip!='' 
+        
+        # invoice number の項目がなく ( invoice/payment voucher 未作成) で、
+        # expense number が Bank じゃなくって、peyee & description & ammount & date がちゃんと入ってるレコードだけ作成する。
+        
         
         sign_png = SIGN_PNG
         
