@@ -1,8 +1,8 @@
 #!/usr/bin/env ruby
 
-# SG会計のための Payment Voucher 作成 スクリプト / tsv/pdfフォーマット都合、自社専用
+# 会計のための Payment Voucher 作成 スクリプト / tsv/pdfフォーマット都合、自社専用
 # http://wkhtmltopdf.org/ をいれておく & gem install pdfkit しておく必要あり。
-# - 20150507 Masakazu OHNO 
+# - 20150507 rakd 
 # 
 # 
 require "PDFKit"
@@ -10,10 +10,11 @@ require 'csv'
 require 'pp'
  
 TSV_FILE_NAME = 'accounting_data.tsv'
-COMPANY_NAME = 'A-FIS PTE LTD'
-YOUR_NAME = 'Director Masakazu OHNO'
+COMPANY_NAME = 'COMPANY NAME '
+YOUR_NAME = 'YOUR NAME'
 OUTPUT_DIR = './output'
 SIGNS_DIR = './signs'
+SIGN_PNG  = File.expand_path("#{SIGNS_DIR}/ohno.png")
 
 CSV.foreach(TSV_FILE_NAME, :col_sep => "\t") do |row|
     e_number = row[0]
@@ -25,7 +26,7 @@ CSV.foreach(TSV_FILE_NAME, :col_sep => "\t") do |row|
     if i_number.to_s.strip=='' and e_number.to_s.strip!='Bank'
       if payee.to_s.strip!='' and desc.to_s.strip!=''
         
-        sign_png = File.expand_path("#{SIGNS_DIR}/ohno.png")
+        sign_png = SIGN_PNG
         
         htmlString = <<-EOS
         <style>
