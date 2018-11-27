@@ -1,6 +1,8 @@
 
 
 export LC_CTYPE=ja_JP.UTF-8
+export GOPATH=$HOME
+
 export LC_ALL=ja_JP.UTF-8
 PATH=~/bin:/usr/local/bin:/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin:$PATH
 PROMPT="${fg_lgreen}%n@${at_underl}%m${at_underloff}${fg_white}: "
